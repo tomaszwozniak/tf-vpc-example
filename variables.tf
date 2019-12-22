@@ -19,3 +19,7 @@ variable "aws_amis" {
     "eu-central-1" = "ami-0cc0a36f626a4fdf5"
   }
 }
+
+variable "zone_id" {
+  type = string
+}

@@ -24,6 +24,7 @@ module "applications" {
   key_name = var.key_name
   aws_region = var.aws_region
   name = var.name
+  zone_id = var.zone_id
 
   public_subnet_id_secondary = module.network.public_subnet_id_primary
   public_subnet_id_primary = module.network.public_subnet_id_secondary

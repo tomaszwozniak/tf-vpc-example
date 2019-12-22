@@ -1,3 +1,15 @@
+resource "aws_route53_record" "www" {
+  zone_id = var.zone_id
+  name    = "example.com"
+  type    = "A"
+
+  alias {
+    name                   = aws_elb.web.dns_name
+    zone_id                = aws_elb.web.zone_id
+    evaluate_target_health = true
+  }
+}
+
 resource "aws_alb" "web" {
   name = "${var.name}-alb"
 
@@ -40,11 +52,6 @@ resource "aws_instance" "web" {
   # we specified
   ami = lookup(var.aws_amis, var.aws_region)
 
-  # The name of our SSH keypair you've created and downloaded
-  # from the AWS console.
-  #
-  # https://console.aws.amazon.com/ec2/v2/home?region=us-west-2#KeyPairs:
-  #
   key_name = var.key_name
 
   # Our Security group to allow HTTP and SSH access
@@ -64,11 +71,6 @@ resource "aws_instance" "bastion" {
   # we specified
   ami = lookup(var.aws_amis, var.aws_region)
 
-  # The name of our SSH keypair you've created and downloaded
-  # from the AWS console.
-  #
-  # https://console.aws.amazon.com/ec2/v2/home?region=us-west-2#KeyPairs:
-  #
   key_name = var.key_name
 
   # Our Security group to allow HTTP and SSH access

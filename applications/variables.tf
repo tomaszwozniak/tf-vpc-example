@@ -5,7 +5,7 @@ variable "key_name" {
   type = string
 }
 variable "aws_amis" {
-  type = string
+  type = map
 }
 variable "aws_region" {
   type = string

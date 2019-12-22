@@ -37,8 +37,9 @@
     terraform init -backend-config=config/backend-${env}.conf
     ```
 
-4. Execute plan and apply commands with var file:
+4. Execute commands with -var-file argument:
     ```bash
     terraform plan -var-file=config/${env}.tfvars
     terraform apply -var-file=config/${env}.tfvars
+    terraform destroy -var-file=config/${env}.tfvars
     ```
