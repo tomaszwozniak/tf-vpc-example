@@ -16,14 +16,14 @@
 2. Create your environment settings by changing config/EXAMPLE files (replace example to your environment name)
 
     ```bash
-    mv config/backend_EXAMPLE.conf config/backend_dev.conf
-    mv config/EXAMPLE.tfvars config/dev.tfvars
+    cp config/backend-EXAMPLE.conf config/backend-dev.conf
+    cp config/EXAMPLE.tfvars config/dev.tfvars
     ```
     
     backend contains state backend settings 
     (it's remote so S3 bucket, region and dynamodb lock table settings are required)
     
-    tvfvars file contains environment and aws ssh key name
+    tvfvars file contains environment, aws ssh key name and r53 zone id
     ```bash
     cd remote_state
     terraform init
