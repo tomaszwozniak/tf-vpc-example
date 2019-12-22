@@ -42,5 +42,3 @@
     terraform plan -var-file=config/${env}.tfvars
     terraform apply -var-file=config/${env}.tfvars
     ```
-
-

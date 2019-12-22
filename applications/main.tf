@@ -1,5 +1,3 @@
-
-
 resource "aws_alb" "web" {
   name = "${var.name}-alb"
 

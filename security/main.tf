@@ -1,5 +1,3 @@
-
-
 # Our default security group to access
 # the instances over SSH and HTTP
 resource "aws_security_group" "instance_sg" {

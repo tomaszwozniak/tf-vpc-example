@@ -1,11 +1,33 @@
-variable "name" {}
-variable "key_name" {}
-variable "aws_amis" {}
-variable "aws_region" {}
-variable "public_subnet_id_secondary" {}
-variable "public_subnet_id_primary" {}
-variable "alb_sg_id" {}
-variable "web_sg_id" {}
-variable "private_subnet_id" {}
-variable "bastion_sg_id" {}
-variable "vpc_id" {}
+variable "name" {
+  type = string
+}
+variable "key_name" {
+  type = string
+}
+variable "aws_amis" {
+  type = string
+}
+variable "aws_region" {
+  type = string
+}
+variable "public_subnet_id_secondary" {
+  type = string
+}
+variable "public_subnet_id_primary" {
+  type = string
+}
+variable "alb_sg_id" {
+  type = string
+}
+variable "web_sg_id" {
+  type = string
+}
+variable "private_subnet_id" {
+  type = string
+}
+variable "bastion_sg_id" {
+  type = string
+}
+variable "vpc_id" {
+  type = string
+}
