@@ -23,7 +23,7 @@
     backend contains state backend settings 
     (it's remote so S3 bucket, region and dynamodb lock table settings are required)
     
-    tvfvars file contains environment, aws ssh key name and r53 zone id
+    tvfvars file contains environment, aws ssh key name and r53 zone idg
     ```bash
     cd remote_state
     terraform init
