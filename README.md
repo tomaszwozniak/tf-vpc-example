@@ -1,7 +1,7 @@
 ## Example VPC with ALB, bastion and webapplication host
 
 ##### Warning #####
-In current setup there is missing internet gateway or VPC 
+In current setup there is missing NAT gateway or VPC 
 endpoints hence packages installation on webserver won't work. 
 To get any reponse from webapp you have to use your own AMI 
 with webserver installed of add missing components.
