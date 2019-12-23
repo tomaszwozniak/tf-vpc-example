@@ -4,10 +4,12 @@ provider "aws" {
   version = "2.43.0"
 }
 
+
 module "network" {
   source = "./network"
   name = var.name
 }
+
 
 module "security" {
   source = "./security"
@@ -16,6 +18,7 @@ module "security" {
   gw = module.network.gw
   name = var.name
 }
+
 
 module "applications" {
   source = "./applications"
